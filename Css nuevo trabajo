@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Fuente divertida y amigable */
+    background-color: #fffbf1; /* Fondo suave */
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    background-color: #ff8c42; /* Color cálido y amigable */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-family: 'Comic Sans MS', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para hacerlo más llamativo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ff70a6;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff9ac8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Secciones */
+main {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff6f0; /* Fondo suave para las secciones */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #ff8c42;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #555;
+}
+
+/* Estilos para las listas */
+ul {
+    margin-top: 20px;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul li a {
+    color: #ff8c42;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ffe29a;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+ul li a:hover {
+    background-color: #ffd26e;
+    transform: translateY(-4px);
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #ff8c42;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+footer p {
+    font-family: 'Comic Sans MS', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Adaptabilidad para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
