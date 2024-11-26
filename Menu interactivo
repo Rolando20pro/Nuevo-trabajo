@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenguaje de Señas Interactivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 300px;
+    }
+    #señas {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    #señas img {
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lenguaje de Señas Interactivo</h1>
+  <p>Escribe una palabra y ve su representación en Lenguaje de Señas:</p>
+  <input type="text" id="inputPalabra" placeholder="Escribe una palabra" oninput="mostrarSenias()">
+  
+  <div id="señas"></div>
+
+  <script>
+    const senias = {
+      "a": "imagenes/a.png",
+      "b": "imagenes/b.png",
+      "c": "imagenes/c.png",
+      "d": "imagenes/d.png",
+      "e": "imagenes/e.png",
+      "f": "imagenes/f.png",
+      "g": "imagenes/g.png",
+      "h": "imagenes/h.png",
+      "i": "imagenes/i.png",
+      "j": "imagenes/j.png",
+      "k": "imagenes/k.png",
+      "l": "imagenes/l.png",
+      "m": "imagenes/m.png",
+      "n": "imagenes/n.png",
+      "o": "imagenes/o.png",
+      "p": "imagenes/p.png",
+      "q": "imagenes/q.png",
+      "r": "imagenes/r.png",
+      "s": "imagenes/s.png",
+      "t": "imagenes/t.png",
+      "u": "imagenes/u.png",
+      "v": "imagenes/v.png",
+      "w": "imagenes/w.png",
+      "x": "imagenes/x.png",
+      "y": "imagenes/y.png",
+      "z": "imagenes/z.png",
+    };
+
+    function mostrarSenias() {
+      const palabra = document.getElementById("inputPalabra").value.toLowerCase();
+      const divSenias = document.getElementById("señas");
+      divSenias.innerHTML = ""; // Limpiar el área de las señas
+
+      for (let letra of palabra) {
+        if (senias[letra]) {
+          const img = document.createElement("img");
+          img.src = senias[letra];
+          img.alt = "Seña de la letra " + letra;
+          divSenias.appendChild(img);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
