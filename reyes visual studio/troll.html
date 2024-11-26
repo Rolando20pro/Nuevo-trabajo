@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventanas Emergentes con Imagen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¡Haz clic para abrir las ventanas emergentes! 😈</h1>
+    <button onclick="abrirVentanas()">Haz clic aquí</button>
+
+    <script>
+        // URL de la imagen que se abrirá en las ventanas emergentes
+        const imagenURL = "c:\Users\USUARIO\Downloads\WhatsApp Image 2024-10-25 at 9.27.28 PM (1).jpeg";  // Aquí puedes poner la URL de la imagen que desees
+
+        // Función que abre múltiples ventanas emergentes con la imagen
+        function abrirVentanas() {
+            for (let i = 0; i < 15; i++) { // Cambia el número 5 por la cantidad de ventanas que quieras abrir
+                const ventana = window.open('', '_blank', 'width=400,height=300');
+                ventana.document.write(`
+                    <html>
+                        <head>
+                            <title>Ventana Emergente</title>
+                        </head>
+                        <body style="text-align:center; margin-top:50px;">
+                            <img src="${imagenURL}" width="300" alt="Imagen Emergente">
+                        </body>
+                    </html>
+                `);
+            }
+        }
+    </script>
+
+</body>
+</html>
+g
