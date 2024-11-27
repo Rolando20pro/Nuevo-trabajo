@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenguaje de Señas Interactivo</title>
+  <link rel="stylesheet" href="css interaccion.css">
+</head>
+<body>
+
+  <h1>Lenguaje de Señas Interactivo</h1>
+  <p>Escribe una palabra y ve su representación en Lenguaje de Señas:</p>
+  <input type="text" id="inputPalabra" placeholder="Escribe una palabra" oninput="mostrarSenias()">
+  
+  <div id="señas"></div>
+
+  <script>
+    const senias = {
+      "a": "c:\Users\PERSONAL\Downloads\A-1024x1024.jpg",
+      "b": "B-1024x1024.jpg",
+      "c": "C-1024x1024.jpg",
+      "d": "D-1024x1024.jpg",
+      "e": "E-1024x1024.jpg",
+      "f": "F-1024x1024.jpg",
+      "g": "g-1024x1024.jpg",
+      "h": "h-1024x1024.jpg",
+      "i": "i-1024x1024.jpg",
+      "j": "j-1024x1024.jpg",
+      "k": "K-1024x1024.jpg",
+      "l": "L-1024x1024.jpg",
+      "m": "M-1024x1024.jpg",
+      "n": "N-1024x1024.jpg",
+      "o": "O-1024x1024.jpg",
+      "p": "P-1024x1024.jpg",
+      "q": "Q-1024x1024.jpg",
+      "r": "R-1024x1024.jpg",
+      "s": "S-1024x1024.jpg",
+      "t": "T-1024x1024.jpg",
+      "u": "U-1024x1024.jpg",
+      "v": "V-1024x1024.jpg",
+      "w": "W-1024x1024.jpg",
+      "x": "X-1024x1024.jpg",
+      "y": "Y-1024x1024.jpg",
+      "z": "Z-1024x1024.jpg",
+    };
+
+    function mostrarSenias() {
+      const palabra = document.getElementById("inputPalabra").value.toLowerCase();
+      const divSenias = document.getElementById("señas");
+      divSenias.innerHTML = ""; // Limpiar el área de las señas
+
+      for (let letra of palabra) {
+        if (senias[letra]) {
+          const img = document.createElement("img");
+          img.src = senias[letra];
+          img.alt = "Seña de la letra " + letra;
+          divSenias.appendChild(img);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
